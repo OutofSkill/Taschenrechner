@@ -50,9 +50,9 @@
     color:#EB6666;
 }
 
-.display .operator 
-.display .operator {
-    color:#26FED7;
+.display .brackets,
+.display .percent {
+	color: #26FED7;
 }
 
 .keys {
