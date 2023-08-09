@@ -19,7 +19,8 @@ for(let key of keys){
         }
         else if(value == "="){
             let result = eval(PrepareInput(input));
-            result = roundToEleventhDecimal(result);
+
+            result = parseFloat(result.toFixed(10));
 
             display_output.innerHTML = CleanOutput(result);
         }
@@ -51,11 +52,6 @@ for(let key of keys){
         }
     })
 
-}
-
-
-function roundToEleventhDecimal(result) {
-    return Number(result.toFixed(11));
 }
 
 function CleanInput(input) {
@@ -107,14 +103,15 @@ function CleanOutput (output) {
         output_array.push(decimal);
     }
 
-    return output_array.join("");
+    output = output_array.join("");
+    return output;
 }
 
 function ValidateInput (value){
     let last_input = input.slice(-1);
     let operators = ["+", "-", "*", "/"];
 
-    if(value == "." && last_input == "."){
+    if(value == "," && last_input == ","){
         return false;
     }
 
