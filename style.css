@@ -97,6 +97,11 @@
     box-shadow: inset 0px 0px 8px rgb(0, 0, 0);
 }
 
+.keys .key:focus
+.keys .key:active {
+    box-shadow: inset 0px 0px 8px rgb(0, 0, 0);
+}
+
 .keys .key.operator span {
     color: #ffff00;
 }
