@@ -60,12 +60,12 @@
 
 .keys {
     background-color: #565656;
-    padding: 1.5rem;
+    padding: 0.75rem;
     border-radius: 1.5rem 1.5rem 0 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    grid-gap:0.75rem;
+    grid-gap:0.65rem;
     box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -87,8 +87,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     
-    font-size: 2.50rem;
+    font-size: 2.25rem;
     font-weight: 700;
     color: #F1FAEE;
 }
