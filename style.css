@@ -36,12 +36,12 @@
 }
 
 .display .input{
-    font-size: 1.25rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
 }
 
 .display .output{
-    font-size: 3rem;
+    font-size: 6rem;
     font-weight: 700;
     max-width: 100%;
     overflow: auto;
