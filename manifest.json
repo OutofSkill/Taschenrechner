@@ -1,7 +1,7 @@
 {
     "name": "Taschenrechner",
     "short_name": "Taschenrechner",
-    "theme_color": "#262626",
+    "theme_color": "#26fed7",
     "background_color": "#262626",
     "display": "fullscreen",
     "orientation": "portrait",
