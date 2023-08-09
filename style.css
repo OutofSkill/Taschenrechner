@@ -71,7 +71,6 @@
 
 .keys .key {
     position: relative;
-    cursor: pointer;
 
     display: block;
     height: 0;

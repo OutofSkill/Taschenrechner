@@ -99,7 +99,7 @@ function CleanOutput (output) {
     }
 
     if(decimal){
-        output_array.push(".");
+        output_array.push(',');
         output_array.push(decimal);
     }
 
@@ -111,7 +111,7 @@ function ValidateInput (value){
     let last_input = input.slice(-1);
     let operators = ["+", "-", "*", "/"];
 
-    if(value == "," && last_input == ","){
+    if(value == "." && last_input == "."){
         return false;
     }
 
