@@ -94,7 +94,7 @@
 }
 
 .keys .key:hover {
-    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 0px 8px rgb(0, 0, 0);
 }
 
 .keys .key.operator span {
