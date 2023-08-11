@@ -3,6 +3,7 @@ const display_input = document.querySelector('.display .input');
 const display_output = document.querySelector('.display .output');
 
 let input = "";
+let operators = ["+", "-", "*", "/"];
 
 for(let key of keys){
     const value = key.dataset.key;
@@ -24,7 +25,9 @@ for(let key of keys){
             display_output.innerHTML = CleanOutput(result);
         }
         else if(input.length >= 18){
-            return;
+            if(input.includes(operators)){
+                input = CleanInput(input);
+            }
         }
         else if (value == "brackets") {
 			if (
@@ -84,8 +87,9 @@ function CleanInput(input) {
         }
     }
 
-    // Combine the formatted text into chunks of a certain length (e.g., 10 characters)
-    const chunkSize = 10;
+    if(input_array.length >= 18){
+
+    const chunkSize = 18;
     let formattedChunks = [];
 
     for (let i = 0; i < input_array.length; i += chunkSize) {
@@ -93,7 +97,10 @@ function CleanInput(input) {
         formattedChunks.push(chunk);
     }
 
-    return formattedChunks.join("<br>"); // Add line breaks between chunks
+    return formattedChunks.join("<br>");
+    }
+
+    return input_array.join("");
 }
 
 
@@ -121,7 +128,6 @@ function CleanOutput (output) {
 
 function ValidateInput (value){
     let last_input = input.slice(-1);
-    let operators = ["+", "-", "*", "/"];
 
     if(value == "." && last_input == "."){
         return false;
