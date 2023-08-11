@@ -6,7 +6,6 @@ let input = "";
 
 for(let key of keys){
     const value = key.dataset.key;
-
     key.addEventListener('click', () => {
         if(value == "clear"){
             input = "";
@@ -23,6 +22,9 @@ for(let key of keys){
             result = parseFloat(result.toFixed(10));
 
             display_output.innerHTML = CleanOutput(result);
+        }
+        else if(input.length >= 18){
+            return;
         }
         else if (value == "brackets") {
 			if (
@@ -82,8 +84,18 @@ function CleanInput(input) {
         }
     }
 
-    return input_array.join("");
+    // Combine the formatted text into chunks of a certain length (e.g., 10 characters)
+    const chunkSize = 10;
+    let formattedChunks = [];
+
+    for (let i = 0; i < input_array.length; i += chunkSize) {
+        const chunk = input_array.slice(i, i + chunkSize).join("");
+        formattedChunks.push(chunk);
+    }
+
+    return formattedChunks.join("<br>"); // Add line breaks between chunks
 }
+
 
 function CleanOutput (output) {
     let output_string = output.toString();
